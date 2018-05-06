@@ -6,6 +6,19 @@ const AutoDM = () => {
   const stream = T.stream("user");
   console.log("Start Sending Auto Direct Message 🚀🚀🚀");
   stream.on("follow", SendMessage);
+  
+  stream.on('tweet', function (tweet) {
+  console.log(tweet);
+  });
+  
+  stream.on('error', function (tweet) {
+  console.log(tweet);
+  });
+
+  stream.on('limitation', function (tweet) {
+  console.log(tweet);
+  });
+  
 };
 
 const SendMessage = user => {
