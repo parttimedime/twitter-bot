@@ -6,6 +6,8 @@ const twitterApp = {
   timeout_ms: 60 * 1000 // optional HTTP request timeout to apply to all requests.
 };
 
+console.log("Start Sending Auto Direct Message 🚀🚀🚀" + process.env.CONSUMER_KEY);
+
 module.exports = {
   twitterApp,
   userName: process.env.USERNAME
