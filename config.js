@@ -7,6 +7,9 @@ const twitterApp = {
 };
 
 console.log("Start Sending Auto Direct Message 🚀🚀🚀" + process.env.CONSUMER_KEY);
+console.log("Start Sending Auto Direct Message 🚀🚀🚀" + process.env.CONSUMER_SECRET);
+console.log("Start Sending Auto Direct Message 🚀🚀🚀" + process.env.ACCESS_TOKEN);
+console.log("Start Sending Auto Direct Message 🚀🚀🚀" + process.env.ACCESS_TOKEN_SECRET);
 
 module.exports = {
   twitterApp,
