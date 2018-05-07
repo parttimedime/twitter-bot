@@ -53,7 +53,18 @@ const SendMessage = user => {
   T.get('statuses/home_timeline', {
   count: 1
   }, (err, data, response) => {
-      console.log(data);
+      //console.log(data);
+    data.forEach(t => {
+        //console.log(t.text);
+        //console.log(t.user.screen_name);
+       // console.log(t.id_str);
+        //console.log('\n');
+         T.post('favorites/create', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${data.text} tweet liked!`);
+          });
+      });
   });
  
   
@@ -72,10 +83,10 @@ const SendMessage = user => {
       count: 1
     }, (err, data, response) => {
        data.forEach(t => {
-        console.log(t.text);
-        console.log(t.user.screen_name);
-        console.log(t.id_str);
-        console.log('\n');
+        //console.log(t.text);
+        //console.log(t.user.screen_name);
+       // console.log(t.id_str);
+        //console.log('\n');
          T.post('favorites/create', {
             id: t.id_str
           }, (err, data, response) => {
