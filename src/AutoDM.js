@@ -46,20 +46,26 @@ const SendMessage = user => {
     screen_name,
     text: GenerateMessage(name)
   };
-  console.log(" 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 " + user.destination);
+  console.log(" 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 " + screen_name);
  
   const handle = screen_name;
   
-  T.get('statuses/user_timeline', {
-  screen_name: handle,
-    count: 1
-}, (err, data, response) => {
-    console.log(data)
-});
+ 
   
   // the follow stream track if I follow author person too.
   if (screen_name != my_user_name) {
     console.log(" 🎉🎉🎉🎉 New Follower  🎉🎉🎉🎉🎉 ");
+     T.get('statuses/user_timeline', {
+    screen_name: handle,
+      count: 1
+    }, (err, data, response) => {
+       data.forEach(t => {
+        console.log(t.text);
+        console.log(t.user.screen_name);
+        console.log(t.id_str);
+        console.log('\n');
+      });
+    });
     setTimeout(() => {
       T.post("direct_messages/new", obj)
         .catch(err => {
