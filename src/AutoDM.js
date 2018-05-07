@@ -11,7 +11,19 @@ const AutoDM = () => {
   stream.on('tweet', function (tweet) {
     if (tweet.user.screen_name == my_user_name)
     {
-      console.log(tweet);
+      T.get('followers/list', {
+      screen_name: 'JustDannYT',
+      count: 20
+      }, (err, data, response) => {
+        data.users.forEach(t => {
+          T.post('friendships/create', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${t.screen_name} followed from MY Tweet from jDT!`);
+          });
+        });
+      //console.log(data);
+    });
     }
   });
  
@@ -48,7 +60,7 @@ const AutoDM = () => {
 
 const SendMessage = user => {
   const { screen_name, name } = user.source;
-
+  
   const obj = {
     screen_name,
     text: GenerateMessage(name)
