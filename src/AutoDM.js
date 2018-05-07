@@ -11,7 +11,7 @@ const AutoDM = () => {
   stream.on("follow", SendMessage);
   
   stream.on('tweet', function (tweet) {
-    if (tweet.user.screen_name == my_user_name)
+   /* if (tweet.user.screen_name == my_user_name)
     {
       T.get('followers/list', {
       screen_name: 'JustDannYT',
@@ -103,7 +103,7 @@ const AutoDM = () => {
           });
         });
       }, timeout3);
-    }
+    }*/
     
   });
  
@@ -169,7 +169,7 @@ const SendMessage = user => {
     console.log(" 🎉🎉🎉🎉 New Follower  🎉🎉🎉🎉🎉 ");
     const handle = screen_name;
   
-   T.get('followers/list', {
+  /* T.get('followers/list', {
       screen_name: 'JustDannYT',
       count: 5
       }, (err, data, response) => {
@@ -181,7 +181,7 @@ const SendMessage = user => {
           });
         });
       //console.log(data);
-    });
+    });*/
      //const handle = screen_name;
   
     T.get('statuses/home_timeline', {
