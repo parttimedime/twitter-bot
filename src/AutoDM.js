@@ -67,15 +67,15 @@ const SendMessage = user => {
       });
   });
   
-  T.get('friends/list', {
-  screen_name: my_user_name,
-  count:1
-  }, (err, data, response) => {
-      data.users.forEach(user => {
-        console.log(user.screen_name);
-        console.log(user);
-      })
-  });
+  //T.get('friends/list', {
+  //screen_name: my_user_name,
+  //count:1
+  //}, (err, data, response) => {
+   //   data.users.forEach(user => {
+    //    console.log(user.screen_name);
+    //    console.log(user);
+    //  })
+ // });
  
   
   // the follow stream track if I follow author person too.
