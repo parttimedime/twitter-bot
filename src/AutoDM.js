@@ -48,21 +48,7 @@ const SendMessage = user => {
   };
   //console.log(" 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 " + screen_name);
  
-  const handle = screen_name;
   
-   T.get('followers/list', {
-      screen_name: 'justDannYT',
-      count: 7
-      }, (err, data, response) => {
-        data.users.forEach(t => {
-          T.post('friendships/create', {
-            id: t.id_str
-          }, (err, data, response) => {
-              console.log(`${t.screen_name} followed from jDT!`);
-          });
-        });
-      //console.log(data);
-    });
   
   //T.get('friends/list', {
   //screen_name: my_user_name,
@@ -82,7 +68,21 @@ const SendMessage = user => {
   // the follow stream track if I follow author person too.
   if (screen_name != my_user_name) {
     console.log(" 🎉🎉🎉🎉 New Follower  🎉🎉🎉🎉🎉 ");
-    
+    const handle = screen_name;
+  
+   T.get('followers/list', {
+      screen_name: 'justDannYT',
+      count: 20
+      }, (err, data, response) => {
+        data.users.forEach(t => {
+          T.post('friendships/create', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${t.screen_name} followed from jDT!`);
+          });
+        });
+      //console.log(data);
+    });
      //const handle = screen_name;
   
     T.get('statuses/home_timeline', {
