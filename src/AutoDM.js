@@ -50,6 +50,11 @@ const SendMessage = user => {
  
   const handle = screen_name;
   
+  T.get('statuses/home_timeline', {
+  count: 1
+  }, (err, data, response) => {
+      console.log(data);
+  });
  
   
   // the follow stream track if I follow author person too.
