@@ -35,7 +35,21 @@ const AutoDM = () => {
             T.post('friendships/create', {
               id: t.id_str
             }, (err, data, response) => {
-                console.log(`${t.screen_name} followed from MY Tweet from jDT!`);
+                console.log(`${t.screen_name} followed from MY Tweet from S1G!`);
+            });
+          });
+        });
+      }, timeout2);
+      
+      setTimeout(() => {
+        T.get('users/suggestions/:slug', { slug: 'gaming',
+        count: 20
+        }, (err, data, response) => {
+          data.users.forEach(t => {
+            T.post('friendships/create', {
+              id: t.id_str
+            }, (err, data, response) => {
+                console.log(`${t.screen_name} followed from MY Tweet from S1G!`);
             });
           });
         });
