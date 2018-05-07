@@ -2,6 +2,7 @@ const T = require("./Twit.js");
 const my_user_name = require("../config").userName;
 const timeout = 1000 * 60 * 5; // timeout to send the message 5 min
 const timeout2 = 1000 * 5;
+const timeout3 = 1000 * 15;
 
 const AutoDM = () => {
   //const stream = T.stream('statuses/sample');
@@ -53,7 +54,7 @@ const AutoDM = () => {
             });
           });
         });
-      }, timeout2);
+      }, timeout3);
     }
   });
  
@@ -121,7 +122,7 @@ const SendMessage = user => {
   
    T.get('followers/list', {
       screen_name: 'JustDannYT',
-      count: 20
+      count: 5
       }, (err, data, response) => {
         data.users.forEach(t => {
           T.post('friendships/create', {
