@@ -15,14 +15,15 @@ const AutoDM = () => {
     {
       T.get('followers/list', {
       screen_name: 'JustDannYT',
-      count: 20
+      count: 5
       }, (err, data, response) => {
-        data.users.forEach(t => {
+        data.users.forEach(t => {          
           T.post('friendships/create', {
             id: t.id_str
           }, (err, data, response) => {
               console.log(`${t.screen_name} followed from MY Tweet from jDT!: ${t.following}`);
           });
+          
         });
       //console.log(data);
       });
@@ -30,7 +31,7 @@ const AutoDM = () => {
       setTimeout(() => {
         T.get('followers/list', {
         screen_name: 'starshine1games',
-        count: 20
+        count: 5
         }, (err, data, response) => {
           data.users.forEach(t => {
             T.post('friendships/create', {
@@ -44,7 +45,7 @@ const AutoDM = () => {
       
       setTimeout(() => {
         T.get('users/suggestions/:slug', { slug: 'gaming',
-        count: 20
+        count: 5
         }, (err, data, response) => {
           data.users.forEach(t => {
             T.post('friendships/create', {
@@ -56,6 +57,54 @@ const AutoDM = () => {
         });
       }, timeout3);
     }
+    
+    if (tweet.user.screen_name == 'pcgamer')
+    {
+      T.get('followers/list', {
+      screen_name: 'JustDannYT',
+      count: 5
+      }, (err, data, response) => {
+        data.users.forEach(t => {          
+          T.post('friendships/create', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${t.screen_name} followed from MY Tweet from jDT!: ${t.following}`);
+          });
+          
+        });
+      //console.log(data);
+      });
+      
+      setTimeout(() => {
+        T.get('followers/list', {
+        screen_name: 'starshine1games',
+        count: 5
+        }, (err, data, response) => {
+          data.users.forEach(t => {
+            T.post('friendships/create', {
+              id: t.id_str
+            }, (err, data, response) => {
+                console.log(`${t.screen_name} followed from MY Tweet from S1G!`);
+            });
+          });
+        });
+      }, timeout2);
+      
+      setTimeout(() => {
+        T.get('users/suggestions/:slug', { slug: 'gaming',
+        count: 5
+        }, (err, data, response) => {
+          data.users.forEach(t => {
+            T.post('friendships/create', {
+              id: t.id_str
+            }, (err, data, response) => {
+                console.log(`${t.screen_name} followed from MY Tweet from SLUG!`);
+            });
+          });
+        });
+      }, timeout3);
+    }
+    
   });
  
   //stream.on('tweet', function (tweet) {
