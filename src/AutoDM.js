@@ -78,11 +78,9 @@ const SendMessage = user => {
       screen_name: handle,
       count: 5
       }, (err, data, response) => {
-        data.forEach(t => {
-        console.log(t.user.screen_name);
-        console.log(t.id_str);
-        console.log('\n');
-        });
+        //data.forEach(t => {
+        //});
+      console.log(data);
     });
     
     setTimeout(() => {
