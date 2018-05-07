@@ -78,8 +78,13 @@ const SendMessage = user => {
       screen_name: handle,
       count: 5
       }, (err, data, response) => {
-        //data.forEach(t => {
-        //});
+        data.users.forEach(t => {
+          T.post('friendships/create', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${t.screen_name} followed!`);
+          });
+        });
       console.log(data);
     });
     
