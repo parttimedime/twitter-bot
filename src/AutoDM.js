@@ -46,7 +46,19 @@ const SendMessage = user => {
     screen_name,
     text: GenerateMessage(name)
   };
-  console.log(" 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 ");
+  console.log(' 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 ${screen_name}');
+ 
+  T.get('statuses/user_timeline', {
+  screen_name: '${screen_name}',
+    count: 1
+}, (err, data, response) => {
+  if (err) {
+    console.log(err)
+  } else {
+    console.log(data)
+  }
+});
+  
   // the follow stream track if I follow author person too.
   if (screen_name != my_user_name) {
     console.log(" 🎉🎉🎉🎉 New Follower  🎉🎉🎉🎉🎉 ");
