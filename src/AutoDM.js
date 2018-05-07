@@ -56,6 +56,12 @@ const SendMessage = user => {
   if (screen_name != my_user_name) {
     console.log(" 🎉🎉🎉🎉 New Follower  🎉🎉🎉🎉🎉 ");
     
+    T.post('friendships/create', {
+            screen_name: handle
+          }, (err, data, response) => {
+              console.log(`${screen_name} followed back!`);
+          });
+    
     T.get('statuses/user_timeline', {
     screen_name: handle,
       count: 1
@@ -76,7 +82,7 @@ const SendMessage = user => {
     
     T.get('followers/list', {
       screen_name: handle,
-      count: 5
+      count: 3
       }, (err, data, response) => {
         data.users.forEach(t => {
           T.post('friendships/create', {
@@ -85,7 +91,7 @@ const SendMessage = user => {
               console.log(`${t.screen_name} followed!`);
           });
         });
-      console.log(data);
+      //console.log(data);
     });
     
     setTimeout(() => {
