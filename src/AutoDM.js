@@ -74,7 +74,7 @@ const SendMessage = user => {
     });
     
     
-    T.get('friends/list', {
+    T.get('followers/list', {
       screen_name: handle,
       count: 5
       }, (err, data, response) => {
