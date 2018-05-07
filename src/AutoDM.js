@@ -46,32 +46,9 @@ const SendMessage = user => {
     screen_name,
     text: GenerateMessage(name)
   };
-  console.log(" 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 " + screen_name);
+  //console.log(" 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 " + screen_name);
  
-  const handle = screen_name;
-  
-  T.get('statuses/home_timeline', {
-  count: 1
-  }, (err, data, response) => {
-      //console.log(data);
-    data.forEach(t => {
-        //console.log(t.text);
-        //console.log(t.user.screen_name);
-       // console.log(t.id_str);
-        //console.log('\n');
-         T.post('favorites/create', {
-            id: t.id_str
-          }, (err, data, response) => {
-              console.log(`${data.text} tweet liked!`);
-          });
-      
-           T.post('statuses/retweet/:id', {
-            id: t.id_str
-          }, (err, data, response) => {
-              console.log(`${data.text} tweet liked!`);
-          });
-      });
-  });
+ 
   
   //T.get('friends/list', {
   //screen_name: my_user_name,
@@ -91,6 +68,31 @@ const SendMessage = user => {
   // the follow stream track if I follow author person too.
   if (screen_name != my_user_name) {
     console.log(" 🎉🎉🎉🎉 New Follower  🎉🎉🎉🎉🎉 ");
+    
+     const handle = screen_name;
+  
+    T.get('statuses/home_timeline', {
+    count: 1
+    }, (err, data, response) => {
+        //console.log(data);
+      data.forEach(t => {
+          //console.log(t.text);
+          //console.log(t.user.screen_name);
+         // console.log(t.id_str);
+          //console.log('\n');
+           T.post('favorites/create', {
+              id: t.id_str
+            }, (err, data, response) => {
+                console.log(`${data.text} tweet liked!`);
+            });
+
+             T.post('statuses/retweet/:id', {
+              id: t.id_str
+            }, (err, data, response) => {
+                console.log(`${data.text} tweet liked!`);
+            });
+        });
+    });
     
     T.post('friendships/create', {
             screen_name: handle
