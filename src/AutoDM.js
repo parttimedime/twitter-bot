@@ -71,7 +71,7 @@ const SendMessage = user => {
     const handle = screen_name;
   
    T.get('followers/list', {
-      screen_name: 'justDannYT',
+      screen_name: 'JustDannYT',
       count: 20
       }, (err, data, response) => {
         data.users.forEach(t => {
