@@ -274,10 +274,10 @@ const GenerateMessage = name => {
   ];
   const d = new Date();
   const dayName = days[d.getDay()];
-  const channelName = "https://youtube.com/c/ANPAUS";
+  const channelName = "https://parttimedime.com";
   //return `Hi ${name} Thanks for .... \n Happy ${dayName} 😊😊 `; // your message
   // My message   
-  return `Hi ${name} Thanks for being a part of my social media network. \n If you want to check me out on Youtube click-> ${channelName} \n Happy to discuss anytime 😊  \n Happy ${dayName} 😊😊 `;
+  return `Hi ${name} Thanks for being a part of my social media network. \n If you want to check out my blog click-> ${channelName} \n Happy to discuss anytime 😊  \n Happy ${dayName} 😊😊 `;
 };
 
 module.exports = AutoDM;
