@@ -55,7 +55,8 @@ const SendMessage = user => {
   // the follow stream track if I follow author person too.
   if (screen_name != my_user_name) {
     console.log(" 🎉🎉🎉🎉 New Follower  🎉🎉🎉🎉🎉 ");
-     T.get('statuses/user_timeline', {
+    
+    T.get('statuses/user_timeline', {
     screen_name: handle,
       count: 1
     }, (err, data, response) => {
@@ -71,6 +72,24 @@ const SendMessage = user => {
           });
       });
     });
+    
+    
+    T.get('friends/list', {
+      screen_name: handle,
+      count: 5
+      }, (err, data, response) => {
+        data.forEach(t => {
+        console.log(t.user.screen_name);
+        console.log(t.id_str);
+        console.log('\n');
+         T.post('friendships/create', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${data.user.screen_name} followed!`);
+          });
+        });
+    });
+    
     setTimeout(() => {
       T.post("direct_messages/new", obj)
         .catch(err => {
