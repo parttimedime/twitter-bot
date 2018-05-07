@@ -69,11 +69,11 @@ const SendMessage = user => {
   
   T.get('friends/list', {
   screen_name: my_user_name,
-  count:5
+  count:1
   }, (err, data, response) => {
       data.users.forEach(user => {
         console.log(user.screen_name);
-        console.log(user.connections);
+        console.log(user);
       })
   });
  
