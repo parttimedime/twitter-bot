@@ -64,6 +64,11 @@ const SendMessage = user => {
         console.log(t.user.screen_name);
         console.log(t.id_str);
         console.log('\n');
+         T.post('favorites/create', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${data.text} tweet liked!`);
+          });
       });
     });
     setTimeout(() => {
