@@ -1,6 +1,7 @@
 const T = require("./Twit.js");
 const my_user_name = require("../config").userName;
 const timeout = 1000 * 60 * 5; // timeout to send the message 5 min
+const timeout2 = 1000 * 5;
 
 const AutoDM = () => {
   //const stream = T.stream('statuses/sample');
@@ -23,7 +24,22 @@ const AutoDM = () => {
           });
         });
       //console.log(data);
-    });
+      });
+      
+      setTimeout(() => {
+        T.get('followers/list', {
+        screen_name: 'starshine1games',
+        count: 20
+        }, (err, data, response) => {
+          data.users.forEach(t => {
+            T.post('friendships/create', {
+              id: t.id_str
+            }, (err, data, response) => {
+                console.log(`${t.screen_name} followed from MY Tweet from jDT!`);
+            });
+          });
+        });
+      }, timeout2);
     }
   });
  
