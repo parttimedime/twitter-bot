@@ -46,7 +46,7 @@ const SendMessage = user => {
     screen_name,
     text: GenerateMessage(name)
   };
-  console.log(' 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 ${screen_name}');
+  console.log(" 🎉🎉🎉🎉 New Event  🎉🎉🎉🎉🎉 " + user.destination);
  
   const handle = screen_name;
   
