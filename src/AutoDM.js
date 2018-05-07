@@ -49,7 +49,7 @@ const AutoDM = () => {
             T.post('friendships/create', {
               id: t.id_str
             }, (err, data, response) => {
-                console.log(`${t.screen_name} followed from MY Tweet from S1G!`);
+                console.log(`${t.screen_name} followed from MY Tweet from SLUG!`);
             });
           });
         });
