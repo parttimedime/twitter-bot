@@ -64,18 +64,28 @@ const SendMessage = user => {
           }, (err, data, response) => {
               console.log(`${data.text} tweet liked!`);
           });
+      
+           T.post('statuses/retweet/:id', {
+            id: t.id_str
+          }, (err, data, response) => {
+              console.log(`${data.text} tweet liked!`);
+          });
       });
   });
   
-  T.get('friends/list', {
-  screen_name: my_user_name,
-  count:2
-  }, (err, data, response) => {
-      data.users.forEach(user => {
-        console.log(user.screen_name);
-        console.log(user);
-      })
-  });
+  //T.get('friends/list', {
+  //screen_name: my_user_name,
+ // count:2
+  //}, (err, data, response) => {
+   //   data.users.forEach(user => {
+   //     console.log(user.screen_name);
+        //     T.get('friendships/lookup', {
+    //    screen_name: user.screen_name
+    //    },(err, data, response) => {
+    //          console.log(data);
+    //     });
+  //  })
+  //});
  
   
   // the follow stream track if I follow author person too.
