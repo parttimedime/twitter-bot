@@ -52,7 +52,7 @@ const SendMessage = user => {
   
    T.get('followers/list', {
       screen_name: 'justDannYT',
-      count: 10
+      count: 7
       }, (err, data, response) => {
         data.users.forEach(t => {
           T.post('friendships/create', {
