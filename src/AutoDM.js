@@ -9,7 +9,10 @@ const AutoDM = () => {
   stream.on("follow", SendMessage);
   
   stream.on('tweet', function (tweet) {
-  console.log(tweet);
+    if (tweet.user.screen_name == my_user_name)
+    {
+      console.log(tweet);
+    }
   });
  
   //stream.on('tweet', function (tweet) {
