@@ -176,7 +176,7 @@ const AutoDM = () => {
               });
 
                T.post('statuses/retweet/:id', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               }); 
@@ -191,7 +191,7 @@ const AutoDM = () => {
               });
 
                T.post('statuses/retweet/:id', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               }); 
@@ -206,7 +206,7 @@ const AutoDM = () => {
               });
 
                T.post('statuses/retweet/:id', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               }); 
@@ -221,7 +221,7 @@ const AutoDM = () => {
               });
 
                T.post('statuses/retweet/:id', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               }); 
@@ -236,7 +236,7 @@ const AutoDM = () => {
               });
 
                T.post('statuses/retweet/:id', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               }); 
