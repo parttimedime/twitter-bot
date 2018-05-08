@@ -197,7 +197,7 @@ const AutoDM = () => {
               }); 
     }
     
-    if (tweet.user.screen_name == 'MarketWatch')
+    if (tweet.user.screen_name == 'Jn_Shine1')
     {
              T.post('favorites/create', {
                 id: tweet.id_str
