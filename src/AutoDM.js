@@ -170,7 +170,7 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'MarketWatch')
     {
       T.get('statuses/home_timeline', {
-      count: 3
+      count: 1
       }, (err, data, response) => {
         data.forEach(t => {
              T.post('favorites/create', {
