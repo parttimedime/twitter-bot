@@ -211,6 +211,36 @@ const AutoDM = () => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               }); 
     }
+   
+    if (tweet.user.screen_name == 'decorartehogar')
+    {
+             T.post('favorites/create', {
+                id: t.id_str
+              }, (err, data, response) => {
+                  console.log(`${data.text} from HomeTimeline tweet liked!`);
+              });
+
+               T.post('statuses/retweet/:id', {
+                id: t.id_str
+              }, (err, data, response) => {
+                  console.log(`${data.text} from Home Timeline tweet RT!`);
+              }); 
+    }
+    
+    if (tweet.user.screen_name == 'Mystik_Justice')
+    {
+             T.post('favorites/create', {
+                id: t.id_str
+              }, (err, data, response) => {
+                  console.log(`${data.text} from HomeTimeline tweet liked!`);
+              });
+
+               T.post('statuses/retweet/:id', {
+                id: t.id_str
+              }, (err, data, response) => {
+                  console.log(`${data.text} from Home Timeline tweet RT!`);
+              }); 
+    }
     
   });
  
