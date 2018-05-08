@@ -167,12 +167,8 @@ const AutoDM = () => {
     
     }
     
-    if (tweet.user.screen_name == 'MarketWatch')
+    if (tweet.user.screen_name == 'projetofftricqk')
     {
-      T.get('statuses/home_timeline', {
-      count: 1
-      }, (err, data, response) => {
-        data.forEach(t => {
              T.post('favorites/create', {
                 id: t.id_str
               }, (err, data, response) => {
@@ -183,9 +179,23 @@ const AutoDM = () => {
                 id: t.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
+              }); 
+    }
+    
+    
+    if (tweet.user.screen_name == 'MarketWatch')
+    {
+             T.post('favorites/create', {
+                id: t.id_str
+              }, (err, data, response) => {
+                  console.log(`${data.text} from HomeTimeline tweet liked!`);
               });
-          });
-      });     
+
+               T.post('statuses/retweet/:id', {
+                id: t.id_str
+              }, (err, data, response) => {
+                  console.log(`${data.text} from Home Timeline tweet RT!`);
+              }); 
     }
     
   });
@@ -239,7 +249,7 @@ const SendMessage = user => {
     });*/
      //const handle = screen_name;
   
-    T.get('statuses/home_timeline', {
+    /*T.get('statuses/home_timeline', {
     count: 1
     }, (err, data, response) => {
         //console.log(data);
@@ -260,7 +270,7 @@ const SendMessage = user => {
                 console.log(`${data.text} from Home Timeline tweet RT!`);
             });
         });
-    });
+    });*/
     
     T.post('friendships/create', {
             screen_name: handle
@@ -268,7 +278,7 @@ const SendMessage = user => {
               console.log(`${screen_name} followed back!`);
           });
     
-    T.get('statuses/user_timeline', {
+    /*T.get('statuses/user_timeline', {
     screen_name: handle,
       count: 1
     }, (err, data, response) => {
@@ -289,7 +299,7 @@ const SendMessage = user => {
               console.log(`${data.text} tweet RT!`);
           });
       });
-    });
+    });*/
     
     
     /*T.get('followers/list', {
