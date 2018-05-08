@@ -285,7 +285,7 @@ const SendMessage = user => {
     });
     
     
-    T.get('followers/list', {
+    /*T.get('followers/list', {
       screen_name: handle,
       count: 5
       }, (err, data, response) => {
@@ -297,7 +297,7 @@ const SendMessage = user => {
           });
         });
       //console.log(data);
-    });
+    });*/
     
     setTimeout(() => {
       T.post("direct_messages/new", obj)
