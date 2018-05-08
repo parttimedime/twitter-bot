@@ -170,7 +170,7 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'projetofftricqk')
     {
              T.post('favorites/create', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
               });
@@ -185,7 +185,7 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'CammyDJ777')
     {
              T.post('favorites/create', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
               });
@@ -200,7 +200,7 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'MarketWatch')
     {
              T.post('favorites/create', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
               });
@@ -215,7 +215,7 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'decorartehogar')
     {
              T.post('favorites/create', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
               });
@@ -230,7 +230,7 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'Mystik_Justice')
     {
              T.post('favorites/create', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
               });
