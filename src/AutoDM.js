@@ -13,16 +13,10 @@ const AutoDM = () => {
   stream.on('tweet', function (tweet) {
    if (tweet.user.screen_name == my_user_name)
     {
-     
       T.get('statuses/home_timeline', {
       count: 3
       }, (err, data, response) => {
-          //console.log(data);
         data.forEach(t => {
-            //console.log(t.text);
-            //console.log(t.user.screen_name);
-           // console.log(t.id_str);
-            //console.log('\n');
              T.post('favorites/create', {
                 id: t.id_str
               }, (err, data, response) => {
@@ -35,65 +29,15 @@ const AutoDM = () => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               });
           });
-      });
-      
-      /* T.get('followers/list', {
-      screen_name: 'JustDannYT',
-      count: 5
-      }, (err, data, response) => {
-        data.users.forEach(t => {          
-          T.post('friendships/create', {
-            id: t.id_str
-          }, (err, data, response) => {
-              console.log(`${t.screen_name} followed from MY Tweet from jDT!: ${t.following}`);
-          });
-          
-        });
-      //console.log(data);
-      });
-      
-      setTimeout(() => {
-        T.get('followers/list', {
-        screen_name: 'starshine1games',
-        count: 5
-        }, (err, data, response) => {
-          data.users.forEach(t => {
-            T.post('friendships/create', {
-              id: t.id_str
-            }, (err, data, response) => {
-                console.log(`${t.screen_name} followed from MY Tweet from S1G!`);
-            });
-          });
-        });
-      }, timeout2);
-      
-      setTimeout(() => {
-        T.get('users/suggestions/:slug', { slug: 'gaming',
-        count: 5
-        }, (err, data, response) => {
-          data.users.forEach(t => {
-            T.post('friendships/create', {
-              id: t.id_str
-            }, (err, data, response) => {
-                console.log(`${t.screen_name} followed from MY Tweet from SLUG!`);
-            });
-          });
-        });
-      }, timeout3);*/
+      });      
     }
     
     if (tweet.user.screen_name == 'MarketWatch')
     {
-     
       T.get('statuses/home_timeline', {
       count: 3
       }, (err, data, response) => {
-          //console.log(data);
         data.forEach(t => {
-            //console.log(t.text);
-            //console.log(t.user.screen_name);
-           // console.log(t.id_str);
-            //console.log('\n');
              T.post('favorites/create', {
                 id: t.id_str
               }, (err, data, response) => {
@@ -106,84 +50,12 @@ const AutoDM = () => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               });
           });
-      });
-      
-      /* T.get('followers/list', {
-      screen_name: 'JustDannYT',
-      count: 5
-      }, (err, data, response) => {
-        data.users.forEach(t => {          
-          T.post('friendships/create', {
-            id: t.id_str
-          }, (err, data, response) => {
-              console.log(`${t.screen_name} followed from MY Tweet from jDT!: ${t.following}`);
-          });
-          
-        });
-      //console.log(data);
-      });
-      
-      setTimeout(() => {
-        T.get('followers/list', {
-        screen_name: 'starshine1games',
-        count: 5
-        }, (err, data, response) => {
-          data.users.forEach(t => {
-            T.post('friendships/create', {
-              id: t.id_str
-            }, (err, data, response) => {
-                console.log(`${t.screen_name} followed from MY Tweet from S1G!`);
-            });
-          });
-        });
-      }, timeout2);
-      
-      setTimeout(() => {
-        T.get('users/suggestions/:slug', { slug: 'gaming',
-        count: 5
-        }, (err, data, response) => {
-          data.users.forEach(t => {
-            T.post('friendships/create', {
-              id: t.id_str
-            }, (err, data, response) => {
-                console.log(`${t.screen_name} followed from MY Tweet from SLUG!`);
-            });
-          });
-        });
-      }, timeout3);*/
+      });     
     }
     
   });
  
-  //stream.on('tweet', function (tweet) {
-  //console.log(tweet);
-  //});
   
-  //stream.on('disconnect', function (disconn) {
-  //console.log('disconnect')
- // });
-  
- // stream.on('error', function (tweet) {
-  //console.log(tweet);
- // });
-
- // stream.on('limitation', function (tweet) {
- // console.log(tweet);
- // });
-  
-  
-//stream.on('connect', function (conn) {
-//  console.log('connecting')
-//});
-
-//stream.on('reconnect', function (reconn, res, interval) {
-//  console.log('reconnecting. statusCode:', res.statusCode)
-//});
-  
-  
-
-
-
 };
 
 const SendMessage = user => {
