@@ -386,7 +386,7 @@ const GenerateMessage = name => {
   const channelName = "https://parttimedime.com";
   //return `Hi ${name} Thanks for .... \n Happy ${dayName} 😊😊 `; // your message
   // My message   
-  return `Hi ${name} Thanks for being a part of my social media network. \n If you want to check out my blog click-> ${channelName} \n Happy to discuss anytime 😊  \n Happy ${dayName} 😊😊 `;
+  return `Hello ${name} Thank you for joining my social media network. \n If you want to check out my blog click-> ${channelName} \n Happy to chat anytime 😊  \n Happy ${dayName} 😊😊 `;
 };
 
 module.exports = AutoDM;
