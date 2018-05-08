@@ -11,25 +11,21 @@ const AutoDM = () => {
   stream.on("follow", SendMessage);
   
   stream.on('tweet', function (tweet) {
-   if (tweet.user.screen_name == my_user_name)
+   if (tweet.user.screen_name == 'followprojecten')
     {
-      T.get('statuses/home_timeline', {
-      count: 3
-      }, (err, data, response) => {
-        data.forEach(t => {
+
              T.post('favorites/create', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
               });
 
                T.post('statuses/retweet/:id', {
-                id: t.id_str
+                id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from Home Timeline tweet RT!`);
               });
-          });
-      });      
+    
     }
     
     if (tweet.user.screen_name == 'MarketWatch')
