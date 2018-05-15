@@ -15,11 +15,11 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'SenseofCents')
     {
 
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -32,11 +32,11 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'tess_wicks')
     {
 
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -49,11 +49,11 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'FITnancials')
     {
 
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -66,12 +66,12 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'ESIMoneyBlog')
     {
 
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
-
+              });*/
+      
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
@@ -83,12 +83,12 @@ const AutoDM = () => {
      if (tweet.user.screen_name == 'financialsamura')
     {
 
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
-
+              });*/
+      
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
@@ -100,11 +100,11 @@ const AutoDM = () => {
     if (tweet.user.screen_name == '24onlinee')
     {
 
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -119,12 +119,12 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'Camilas1Empire')
     {
 
-             T.post('favorites/create', {
+              /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
-
+              });*/
+      
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
@@ -136,11 +136,11 @@ const AutoDM = () => {
        if (tweet.user.screen_name == 'RamIsRising')
     {
 
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -153,12 +153,12 @@ const AutoDM = () => {
     if (tweet.user.screen_name == 'BudgetsAreSexy')
     {
 
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
-
+              });*/
+      
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
@@ -169,11 +169,11 @@ const AutoDM = () => {
     
     if (tweet.user.screen_name == 'Help__F')
     {
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -184,11 +184,11 @@ const AutoDM = () => {
     
     if (tweet.user.screen_name == 'EmpireGain')
     {
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -199,12 +199,12 @@ const AutoDM = () => {
     
     if (tweet.user.screen_name == 'Ninjabudgeter')
     {
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
-
+              });*/
+      
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
@@ -214,11 +214,11 @@ const AutoDM = () => {
    
     if (tweet.user.screen_name == 'vivaciousStar2')
     {
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -229,12 +229,12 @@ const AutoDM = () => {
     
     if (tweet.user.screen_name == 'MarEthr')
     {
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
-
+              });*/
+      
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
@@ -245,11 +245,12 @@ const AutoDM = () => {
     
     if (tweet.user.screen_name == 'RetweetBloggers')
     {
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
+      
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -261,12 +262,12 @@ const AutoDM = () => {
        
     if (tweet.user.screen_name == 'LovingBlogs')
     {
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
-
+              });*/
+      
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
@@ -293,11 +294,11 @@ const AutoDM = () => {
     
      if (tweet.user.screen_name == 'BloggersTribe')
     {
-             T.post('favorites/create', {
+            /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -309,11 +310,11 @@ const AutoDM = () => {
     
       if (tweet.user.screen_name == 'PLBChat')
     {
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -324,11 +325,11 @@ const AutoDM = () => {
 
           if (tweet.user.screen_name == 'FemaleBloggerRT')
     {
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -339,11 +340,11 @@ const AutoDM = () => {
 
           if (tweet.user.screen_name == 'blogginggals')
     {
-             T.post('favorites/create', {
+             /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -354,11 +355,11 @@ const AutoDM = () => {
 
           if (tweet.user.screen_name == 'BBlogRT')
     {
-             T.post('favorites/create', {
+              /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
@@ -370,11 +371,11 @@ const AutoDM = () => {
     
     if (tweet.user.screen_name == 'cattina3')
     {
-             T.post('favorites/create', {
+              /*T.post('favorites/create', {
                 id: tweet.id_str
               }, (err, data, response) => {
                   console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });
+              });*/
 
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
