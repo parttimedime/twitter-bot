@@ -133,7 +133,7 @@ const AutoDM = () => {
     
     }
     
-       if (tweet.user.screen_name == 'WriterB2b')
+       if (tweet.user.screen_name == 'RamIsRising')
     {
 
              T.post('favorites/create', {
@@ -167,7 +167,7 @@ const AutoDM = () => {
     
     }
     
-    if (tweet.user.screen_name == 'YoungAdventures')
+    if (tweet.user.screen_name == 'Help__F')
     {
              T.post('favorites/create', {
                 id: tweet.id_str
@@ -182,7 +182,7 @@ const AutoDM = () => {
               }); 
     }
     
-    if (tweet.user.screen_name == 'DrivinVibin')
+    if (tweet.user.screen_name == 'EmpireGain')
     {
              T.post('favorites/create', {
                 id: tweet.id_str
@@ -212,7 +212,7 @@ const AutoDM = () => {
               }); 
     }
    
-    if (tweet.user.screen_name == 'getrichslowly')
+    if (tweet.user.screen_name == 'vivaciousStar2')
     {
              T.post('favorites/create', {
                 id: tweet.id_str
@@ -227,7 +227,7 @@ const AutoDM = () => {
               }); 
     }
     
-    if (tweet.user.screen_name == 'wisebread')
+    if (tweet.user.screen_name == 'MarEthr')
     {
              T.post('favorites/create', {
                 id: tweet.id_str
@@ -368,7 +368,7 @@ const AutoDM = () => {
     } 
     
     
-    if (tweet.user.screen_name == 'rockstarfinance')
+    if (tweet.user.screen_name == 'cattina3')
     {
              T.post('favorites/create', {
                 id: tweet.id_str
