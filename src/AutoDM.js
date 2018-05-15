@@ -97,7 +97,7 @@ const AutoDM = () => {
     
     }
     
-    if (tweet.user.screen_name == 'retirebyforty')
+    if (tweet.user.screen_name == '24onlinee')
     {
 
              T.post('favorites/create', {
@@ -116,7 +116,7 @@ const AutoDM = () => {
     
     
      
-    if (tweet.user.screen_name == 'ThinkSaveRetire')
+    if (tweet.user.screen_name == 'Camilas1Empire')
     {
 
              T.post('favorites/create', {
