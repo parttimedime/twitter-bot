@@ -11,7 +11,7 @@ const AutoDM = () => {
   stream.on("follow", SendMessage);
   
   stream.on('tweet', function (tweet) {
-    console.log(tweet);
+    console.log(tweet.entities.user_mentions);
     if (tweet.user.screen_name == 'SenseofCents')
     {
                T.post('statuses/retweet/:id', {
