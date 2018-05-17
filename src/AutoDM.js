@@ -14,6 +14,7 @@ const AutoDM = () => {
    
     console.log(tweet);
     
+    
     if (tweet.user.screen_name == 'SenseofCents')
     {
 
