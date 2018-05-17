@@ -11,19 +11,9 @@ const AutoDM = () => {
   stream.on("follow", SendMessage);
   
   stream.on('tweet', function (tweet) {
-   
     console.log(tweet);
-    
-    
     if (tweet.user.screen_name == 'SenseofCents')
     {
-
-             /*T.post('favorites/create', {
-                id: tweet.id_str
-              }, (err, data, response) => {
-                  console.log(`${data.text} from HomeTimeline tweet liked!`);
-              });*/
-
                T.post('statuses/retweet/:id', {
                 id: tweet.id_str
               }, (err, data, response) => {
