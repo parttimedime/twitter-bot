@@ -460,11 +460,11 @@ const SendMessage = user => {
         });
     });*/
     
-    T.post('friendships/create', {
+    /*T.post('friendships/create', {
             screen_name: handle
           }, (err, data, response) => {
               console.log(`${screen_name} followed back!`);
-          });
+          });*/
     
     /*T.get('statuses/user_timeline', {
     screen_name: handle,
@@ -530,7 +530,7 @@ const GenerateMessage = name => {
   const channelName = "https://parttimedime.com";
   //return `Hi ${name} Thanks for .... \n Happy ${dayName} 😊😊 `; // your message
   // My message   
-  return `Hello ${name} Thank you for joining my social media network. \n If you want to check out my blog click-> ${channelName} \n Happy to chat anytime 😊  \n Happy ${dayName} 😊😊 `;
+  return `Hello ${name} Thank you for joining my social media network. \n I am the creator of PartTimeDime.COM, a site about easy ways to save and earn money \n If you want to check out my blog click-> ${channelName} \n Happy to chat anytime 😊  \n Happy ${dayName} 😊😊 `;
 };
 
 module.exports = AutoDM;
