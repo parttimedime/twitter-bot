@@ -23,7 +23,11 @@ const AutoDM = () => {
             t.connections.forEach(a => {
               if (a == "followed_by")
               {
-                console.log(a);
+                 T.post('statuses/retweet/:id', {
+                      id: tweet.id_str
+                  }, (err, data, response) => {
+                      console.log(`${data.text} AS it was tagged ME tweet RT!`);
+                  });
               }
             });
          });
