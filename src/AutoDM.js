@@ -21,7 +21,10 @@ const AutoDM = () => {
          console.log(data);
          data.forEach(t => {
             t.connections.forEach(a => {
-              console.log(a);
+              if (a == "followed_by")
+              {
+                console.log(a);
+              }
             });
          });
     });
