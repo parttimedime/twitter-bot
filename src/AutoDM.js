@@ -13,7 +13,12 @@ const AutoDM = () => {
   const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' })
 
   stream2.on('tweet', function (tweet) {
-    console.log(tweet)
+    console.log(tweet);
+    T.get('friendships/lookup', {
+        screen_name: tweet.user.screen_name
+    }, (err, data, response) => {
+        console.log(err)
+    })
   })
   
   stream.on('tweet', function (tweet) {
