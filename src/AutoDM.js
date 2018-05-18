@@ -18,6 +18,7 @@ const AutoDM = () => {
     T.get('friendships/lookup', {
         screen_name: tweet.user.screen_name
     }, (err, data, response) => {
+         console.log(data);
          data.connections.forEach(t => {
           console.log(t);
          });
