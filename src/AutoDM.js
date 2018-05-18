@@ -14,15 +14,16 @@ const AutoDM = () => {
 
   stream2.on('tweet', function (tweet) {
     console.log(tweet);
+    //console.log(tweet.entities.user_mentions);
     T.get('friendships/lookup', {
         screen_name: tweet.user.screen_name
     }, (err, data, response) => {
-        console.log(err)
+        console.log(data)
     })
   })
   
   stream.on('tweet', function (tweet) {
-    console.log(tweet.entities.user_mentions);
+    
     if (tweet.user.screen_name == 'SenseofCents')
     {
                T.post('statuses/retweet/:id', {
