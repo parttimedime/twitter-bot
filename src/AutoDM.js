@@ -13,8 +13,6 @@ const AutoDM = () => {
   const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' })
 
   stream2.on('tweet', function (tweet) {
-    console.log(tweet);
-    
     T.get('friendships/lookup', {
         screen_name: tweet.user.screen_name
     }, (err, data, response) => {
@@ -26,7 +24,7 @@ const AutoDM = () => {
                  T.post('statuses/retweet/:id', {
                       id: tweet.id_str
                   }, (err, data, response) => {
-                      console.log(`${data.text} AS it was tagged ME tweet RT!`);
+                      console.log(`🚀🚀🚀 ${data.text} AS it was tagged ME tweet RT!`);
                   });
               }
             });
