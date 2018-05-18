@@ -19,7 +19,11 @@ const AutoDM = () => {
         screen_name: tweet.user.screen_name
     }, (err, data, response) => {
          console.log(data);
-       
+         data.forEach(t => {
+            t.connections.forEach(a => {
+              console.log(a);
+            });
+         });
     });
   })
   
