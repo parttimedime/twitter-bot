@@ -10,6 +10,12 @@ const AutoDM = () => {
   console.log("Start Sending Auto Direct Message 🚀🚀🚀" + my_user_name);
   stream.on("follow", SendMessage);
   
+  const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' })
+
+  stream2.on('tweet', function (tweet) {
+    console.log(tweet)
+  })
+  
   stream.on('tweet', function (tweet) {
     console.log(tweet.entities.user_mentions);
     if (tweet.user.screen_name == 'SenseofCents')
