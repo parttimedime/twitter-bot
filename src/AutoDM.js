@@ -542,10 +542,10 @@ const GenerateMessage = name => {
   ];
   const d = new Date();
   const dayName = days[d.getDay()];
-  const channelName = "https://parttimedime.com";
+  const channelName = "https://youtube.com/c/ANPAUS";
   //return `Hi ${name} Thanks for .... \n Happy ${dayName} 😊😊 `; // your message
   // My message   
-  return `Hello ${name} Thank you for joining my social media network. \n I am the creator of PartTimeDime.COM, a site about easy ways to save and earn money \n If you want to check out my blog click-> ${channelName} \n Happy to chat anytime 😊  \n Happy ${dayName} 😊😊 `;
+  return `Hello ${name} Thank you for joining my social media network. \n If you want to check me out on YouTube  click-> ${channelName} \n Happy to chat anytime 😊  \n Happy ${dayName} 😊😊 `;
 };
 
 module.exports = AutoDM;
