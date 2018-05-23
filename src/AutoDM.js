@@ -131,7 +131,7 @@ const AutoDM = () => {
     
     
      
-    if (tweet.user.screen_name == 'Camilas1Empire')
+    if (tweet.user.screen_name == 'AGGchicks')
     {
 
               /*T.post('favorites/create', {
@@ -148,7 +148,7 @@ const AutoDM = () => {
     
     }
     
-       if (tweet.user.screen_name == 'RamIsRising')
+       if (tweet.user.screen_name == 'girlstreamers')
     {
 
             /*T.post('favorites/create', {
