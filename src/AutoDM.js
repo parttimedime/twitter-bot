@@ -13,7 +13,7 @@ const AutoDM = () => {
    // const stream2 = eval("var x = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' }); exports.x = x");
 
   
-  eval("const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' });
+  const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' });
 
   stream2.on('tweet', function (tweet) {
     T.get('friendships/lookup', {
@@ -33,7 +33,7 @@ const AutoDM = () => {
             });
          });
     });
-  });");
+  });
   
   
   
