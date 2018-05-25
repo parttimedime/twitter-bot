@@ -49,7 +49,7 @@ const AutoDM = () => {
     
     }
     
-    if (tweet.user.screen_name == 'tess_wicks')
+    if (tweet.user.screen_name == 'GamerGalsRT')
     {
 
              /*T.post('favorites/create', {
@@ -66,7 +66,7 @@ const AutoDM = () => {
     
     }
     
-    if (tweet.user.screen_name == 'FITnancials')
+    if (tweet.user.screen_name == 'FreeAgentMafia')
     {
 
              /*T.post('favorites/create', {
@@ -83,7 +83,7 @@ const AutoDM = () => {
     
     }
     
-    if (tweet.user.screen_name == 'ESIMoneyBlog')
+    if (tweet.user.screen_name == 'FAMafiaRT')
     {
 
             /*T.post('favorites/create', {
