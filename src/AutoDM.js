@@ -11,6 +11,9 @@ const AutoDM = () => {
   stream.on("follow", SendMessage);
   
   const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' });
+  var _eval = require('eval')
+  var res = _eval('var x = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' }); exports.x = x')
+
 
   stream2.on('tweet', function (tweet) {
     T.get('friendships/lookup', {
