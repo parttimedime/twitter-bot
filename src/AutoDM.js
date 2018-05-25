@@ -10,8 +10,8 @@ const AutoDM = () => {
   console.log("Start Sending Auto Direct Message 🚀🚀🚀" + my_user_name);
   stream.on("follow", SendMessage);
   
-  const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' });
-  var res = eval("var x = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' }); exports.x = x");
+  //const stream2 = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' });
+  const stream2 = eval("var x = T.stream('statuses/filter', { track: '@PartTimeDimeCOM', language: 'en' }); exports.x = x");
 
 
   stream2.on('tweet', function (tweet) {
